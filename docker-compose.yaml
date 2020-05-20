@@ -1,0 +1,14 @@
+ 
+version: '3'
+
+services:
+  api:
+    
+    image: strapi/strapi
+    restart: unless-stopped
+    container_name: strapi
+    
+    ports: 
+      - 8080:1337
+    volumes:
+      - ./:/srv/app
